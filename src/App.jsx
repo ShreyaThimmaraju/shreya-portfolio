@@ -1,8 +1,157 @@
 import "./App.css";
 
+const projects = [
+  {
+    title: "Jaikisan – Farmer Market Application",
+    type: "Manual Testing + Selenium Automation",
+    description:
+      "End-to-end QA project covering test scenarios, test cases, defect reporting and Selenium automation using Java, TestNG, Maven and POM.",
+    tools:
+      "Selenium | Java | TestNG | Maven | POM | Jenkins | ExtentReports",
+    link:
+      "https://github.com/ShreyaThimmaraju/Jaikisan-Farmer-Market-Application-Manual-Testing",
+  },
+  {
+    title: "D-Cart Application",
+    type: "Manual Testing – E-commerce",
+    description:
+      "Manual testing project covering e-commerce functionality, user flows, test cases, positive and negative scenarios and defect identification.",
+    tools: "Manual Testing | Test Cases | Bug Reporting",
+    link: "https://github.com/ShreyaThimmaraju/D-Cart-Manual-Testing",
+  },
+  {
+    title: "Eazysch – School Management System",
+    type: "Manual Testing – Web Application",
+    description:
+      "Testing of a school management web application by creating test scenarios, executing test cases and identifying application defects.",
+    tools: "Manual Testing | Test Scenarios | Test Cases",
+    link: "https://github.com/ShreyaThimmaraju/Eazysch-School-Management-System-Manual-Testing",
+  },
+  {
+    title: "Event Management Application",
+    type: "Manual Testing – Web Application",
+    description:
+      "Manual testing project covering event-related functionality, form validation, user flows and application behavior.",
+    tools: "Manual Testing | Functional Testing | Bug Reporting",
+    link: "https://github.com/ShreyaThimmaraju/Event-Management-Manual-Testing",
+  },
+  {
+    title: "Get-In-Touch Contact Form",
+    type: "Manual Testing – Form Validation",
+    description:
+      "Testing of contact form functionality including input validation, mandatory fields, valid and invalid data and error handling.",
+    tools: "Manual Testing | Validation | Test Cases",
+    link: "https://github.com/ShreyaThimmaraju/Get-In-Touch-Contact-Form-Manual-Testing",
+  },
+  {
+    title: "Hotel Website",
+    type: "Manual Testing – Hotel Booking",
+    description:
+      "Manual testing of hotel website functionality including navigation, booking flow, input fields and user interactions.",
+    tools: "Manual Testing | Functional Testing | Regression Testing",
+    link: "https://github.com/ShreyaThimmaraju/Hotel-Website-Manual-Testing",
+  },
+  {
+    title: "Snake Game",
+    type: "Manual Testing – Game Application",
+    description:
+      "Testing project focused on game functionality, controls, game rules, boundary conditions and different user scenarios.",
+    tools: "Manual Testing | Functional Testing | Boundary Testing",
+    link: "https://github.com/ShreyaThimmaraju/Snake-Game-Manual-Testing",
+  },
+  {
+    title: "Todo App",
+    type: "Manual Testing – Web Application",
+    description:
+      "Testing of Todo application functionality including adding, updating and managing tasks with positive and negative scenarios.",
+    tools: "Manual Testing | Test Cases | Regression Testing",
+    link: "https://github.com/ShreyaThimmaraju/Todo-App-Manual-Testing",
+  },
+  {
+    title: "TV Maze Application",
+    type: "Manual Testing – Web Application",
+    description:
+      "Manual testing project covering application navigation, search functionality, results and user interactions.",
+    tools: "Manual Testing | Functional Testing | Test Scenarios",
+    link: "https://github.com/ShreyaThimmaraju/TVMAZE-Manual-Testing",
+  },
+  {
+    title: "uMap – Maps Application",
+    type: "Manual Testing – Maps & Location",
+    description:
+      "Testing of map and location-related functionality including navigation, map interactions and different user scenarios.",
+    tools: "Manual Testing | Functional Testing | Test Cases",
+    link: "https://github.com/ShreyaThimmaraju/uMap-Maps-Application-Manual-Testing",
+  },
+];
+
+const tools = [
+  {
+    icon: "🧪",
+    name: "Manual Testing",
+    description: "Functional, Regression, Smoke and Sanity Testing",
+  },
+  {
+    icon: "🌐",
+    name: "Selenium WebDriver",
+    description: "Web application automation testing",
+  },
+  {
+    icon: "☕",
+    name: "Java",
+    description: "Core Java programming for automation testing",
+  },
+  {
+    icon: "📋",
+    name: "TestNG",
+    description: "Test execution and test organization",
+  },
+  {
+    icon: "📦",
+    name: "Maven",
+    description: "Build and dependency management",
+  },
+  {
+    icon: "🧩",
+    name: "Page Object Model",
+    description: "Reusable automation framework design",
+  },
+  {
+    icon: "📊",
+    name: "ExtentReports",
+    description: "HTML automation test reporting",
+  },
+  {
+    icon: "🔧",
+    name: "Jenkins",
+    description: "Automation execution through CI/CD",
+  },
+  {
+    icon: "🚀",
+    name: "Postman",
+    description: "API request execution and validation",
+  },
+  {
+    icon: "🗄️",
+    name: "SQL / MySQL",
+    description: "Database and data validation",
+  },
+  {
+    icon: "🐙",
+    name: "Git & GitHub",
+    description: "Version control and project management",
+  },
+  {
+    icon: "💻",
+    name: "Eclipse",
+    description: "Java and Selenium development",
+  },
+];
+
 function App() {
   return (
-    <div>
+    <div className="app">
+
       {/* =========================
           NAVBAR
       ========================= */}
@@ -12,18 +161,12 @@ function App() {
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#objective">Objective</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#testing">Testing</a></li>
-          <li><a href="#testing-process">Testing Process</a></li>
           <li><a href="#tools">Tools</a></li>
-          <li><a href="#what-i-can-do">What I Can Do</a></li>
-          <li><a href="#workflow">Workflow</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#career">Career</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#why-hire-me">Why Hire Me</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -32,24 +175,86 @@ function App() {
           HOME
       ========================= */}
       <section id="home" className="hero">
+
+        {/* SOCIAL ICONS */}
+        <div className="social-icons">
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/ShreyaThimmaraju"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-2.13c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.18v3.23c0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+              />
+            </svg>
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/shreya-t-9726232a2/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.54 20.45H7.1V8.98H3.54v11.47ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"
+              />
+            </svg>
+          </a>
+
+          {/* Email */}
+          <a
+            href="mailto:shreyathimmarajuv@gmail.com"
+            aria-label="Email"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"
+              />
+            </svg>
+          </a>
+
+        </div>
+
         <div className="hero-content">
+
           <div className="availability-badge">
             🟢 Open to Opportunities
           </div>
 
-          <p className="intro-text">Hello, I'm</p>
+          <p className="intro-text">
+            Hello, I'm
+          </p>
 
-          <h1>Shreya T</h1>
+          <h1>
+            Shreya T
+          </h1>
 
-          <h2>Software Tester</h2>
+          <h2>
+            I'm a Software Tester
+          </h2>
+
+          <p className="hero-role">
+            Manual Tester | QA Engineer | Automation Tester
+          </p>
 
           <p className="hero-description">
-            I am a passionate software testing enthusiast
-            looking for an opportunity to start my career
-            in the IT industry.
+            I am a passionate Software Testing professional with
+            knowledge of Manual Testing and Automation Testing.
+            I enjoy finding defects, designing test cases and
+            helping deliver high-quality software.
           </p>
 
           <div className="hero-buttons">
+
             <a
               href="#projects"
               className="primary-button"
@@ -64,209 +269,201 @@ function App() {
             >
               Download Resume
             </a>
+
           </div>
+
         </div>
 
         <div className="hero-image">
+
           <img
             src="/images/profile.jpg"
             alt="Shreya T"
           />
+
         </div>
+
       </section>
 
       {/* =========================
           ABOUT
       ========================= */}
       <section id="about" className="about-section">
+
         <div className="about-container">
+
           <div className="about-text">
-            <h2>About Me</h2>
 
-            <h3>Hi, I'm Shreya T 👋</h3>
+            <p className="section-label">
+              ABOUT ME
+            </p>
+
+            <h2>
+              Software Testing Professional
+            </h2>
+
+            <h3>
+              Hi, I'm Shreya T 👋
+            </h3>
 
             <p>
-              I am an MCA graduate and an aspiring software
-              professional passionate about technology,
-              software testing, and creating user-friendly
-              digital experiences.
+              I am an MCA graduate and an aspiring Software
+              Testing professional with a strong interest in
+              Manual Testing and Automation Testing.
             </p>
 
             <p>
-              I have knowledge of Java, HTML, CSS,
-              JavaScript, SQL and software testing.
-              I enjoy learning new technologies and
-              developing projects that solve real-world
-              problems.
+              I have hands-on project experience in creating
+              test scenarios, writing and executing test cases,
+              identifying defects and preparing bug reports.
+              I also have experience with Selenium WebDriver,
+              Java, TestNG, Maven and Page Object Model.
             </p>
 
             <p>
-              I am looking for an opportunity where I can
-              apply my skills, gain practical experience,
-              and grow professionally.
+              I enjoy analyzing applications from a user's
+              perspective, finding issues and continuously
+              improving my testing skills.
             </p>
 
-            <div className="resume-buttons">
-              <a
-                href="/Shreya_T_Resume.pdf"
-                download
-                className="resume-btn"
-              >
-                📄 Download Resume
-              </a>
-
-              <a
-                href="/Shreya_T_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resume-view-btn"
-              >
-                👁️ View Resume
-              </a>
-            </div>
           </div>
+
         </div>
-      </section>
 
-      {/* =========================
-          CAREER OBJECTIVE
-      ========================= */}
-      <section
-        id="objective"
-        className="objective-section"
-      >
-        <div className="objective-container">
-          <h2>Career Objective</h2>
-
-          <p>
-            To begin my career as a Software Tester where I
-            can apply my knowledge of manual testing, test
-            case design, defect reporting, and software
-            testing concepts to contribute to delivering
-            high-quality software.
-          </p>
-
-          <p>
-            I am eager to learn new technologies, improve my
-            testing skills, and grow as a professional while
-            contributing positively to the organization.
-          </p>
-        </div>
       </section>
 
       {/* =========================
           SKILLS
       ========================= */}
       <section id="skills" className="skills-section">
-        <h2>My Skills</h2>
+
+        <p className="section-label">
+          MY SKILLS
+        </p>
+
+        <h2>
+          Skills & Expertise
+        </h2>
 
         <div className="skills-container">
+
           <div className="skill-card">
-            <h3>🧪 Software Testing</h3>
+            <div className="skill-icon">🧪</div>
+            <h3>Manual Testing</h3>
             <p>
-              Manual Testing, Functional Testing,
-              Regression Testing, Smoke Testing,
-              Sanity Testing
+              Functional, Regression, Smoke and Sanity Testing.
             </p>
           </div>
 
           <div className="skill-card">
-            <h3>📝 Test Cases</h3>
+            <div className="skill-icon">📝</div>
+            <h3>Test Case Design</h3>
             <p>
-              Test Scenario Creation, Test Case Writing,
-              Test Case Execution and Defect Reporting
+              Test scenarios, positive and negative test cases.
             </p>
           </div>
 
           <div className="skill-card">
-            <h3>🐞 Bug Tracking</h3>
+            <div className="skill-icon">🐞</div>
+            <h3>Bug Reporting</h3>
             <p>
-              Bug Identification, Bug Reporting,
-              Severity, Priority and Defect Life Cycle
+              Defect identification, severity, priority and reporting.
             </p>
           </div>
 
           <div className="skill-card">
-            <h3>💻 Programming</h3>
+            <div className="skill-icon">🌐</div>
+            <h3>Automation Testing</h3>
             <p>
-              Java, Python, HTML, CSS and JavaScript
+              Selenium WebDriver automation using Java and TestNG.
             </p>
           </div>
 
           <div className="skill-card">
-            <h3>🗄️ Database</h3>
+            <div className="skill-icon">🗄️</div>
+            <h3>SQL</h3>
             <p>
-              SQL and Basic Database Concepts
+              Basic SQL and database validation.
             </p>
           </div>
 
           <div className="skill-card">
-            <h3>🛠️ Tools</h3>
+            <div className="skill-icon">🔧</div>
+            <h3>Version Control</h3>
             <p>
-              Git, GitHub, VS Code, Eclipse
-              and Test Management Tools
+              Git and GitHub for project version management.
             </p>
           </div>
+
         </div>
+
       </section>
 
       {/* =========================
           TESTING KNOWLEDGE
       ========================= */}
       <section id="testing" className="testing-section">
-        <h2>Testing Knowledge</h2>
+
+        <p className="section-label">
+          QA KNOWLEDGE
+        </p>
+
+        <h2>
+          Testing Knowledge
+        </h2>
 
         <div className="testing-container">
+
           <div className="testing-card">
             <h3>SDLC</h3>
             <p>
-              Understanding of Software Development
-              Life Cycle and different development models.
+              Understanding of Software Development Life Cycle
+              and software development activities.
             </p>
           </div>
 
           <div className="testing-card">
             <h3>STLC</h3>
             <p>
-              Knowledge of Software Testing Life Cycle
-              including test planning, test execution
-              and closure.
+              Knowledge of Software Testing Life Cycle including
+              planning, test design, execution and closure.
             </p>
           </div>
 
           <div className="testing-card">
             <h3>Defect Life Cycle</h3>
             <p>
-              Understanding of defect identification,
-              reporting, assignment, fixing,
-              retesting and closure.
+              Understanding of defect identification, reporting,
+              fixing, retesting and closure.
             </p>
           </div>
 
           <div className="testing-card">
             <h3>Test Design Techniques</h3>
             <p>
-              Knowledge of Boundary Value Analysis
-              and Equivalence Partitioning.
+              Knowledge of Boundary Value Analysis and
+              Equivalence Partitioning.
             </p>
           </div>
 
           <div className="testing-card">
             <h3>Functional Testing</h3>
             <p>
-              Experience with functional, regression,
-              smoke and sanity testing concepts.
+              Testing application functionality against
+              expected requirements.
             </p>
           </div>
 
           <div className="testing-card">
-            <h3>Agile Methodology</h3>
+            <h3>Agile Testing</h3>
             <p>
-              Basic understanding of Agile development,
-              Scrum and testing activities in sprints.
+              Basic understanding of Agile, Scrum and testing
+              activities during development cycles.
             </p>
           </div>
+
         </div>
+
       </section>
 
       {/* =========================
@@ -276,38 +473,46 @@ function App() {
         id="testing-process"
         className="testing-process-section"
       >
-        <h2>My Testing Process</h2>
+
+        <p className="section-label">
+          HOW I TEST
+        </p>
+
+        <h2>
+          My Testing Process
+        </h2>
 
         <div className="testing-process-container">
+
           <div className="process-card">
-            <div className="process-number">1</div>
+            <div className="process-number">01</div>
             <h3>Requirement Analysis</h3>
             <p>
-              Understand the requirements and identify
-              what needs to be tested.
+              Understand requirements and identify
+              application functionality to be tested.
             </p>
           </div>
 
           <div className="process-card">
-            <div className="process-number">2</div>
+            <div className="process-number">02</div>
             <h3>Test Planning</h3>
             <p>
-              Identify testing scope, test approach,
-              resources and timelines.
+              Identify testing scope, approach,
+              resources and test coverage.
             </p>
           </div>
 
           <div className="process-card">
-            <div className="process-number">3</div>
+            <div className="process-number">03</div>
             <h3>Test Case Design</h3>
             <p>
-              Create test scenarios and test cases
-              based on the requirements.
+              Create test scenarios and detailed
+              positive and negative test cases.
             </p>
           </div>
 
           <div className="process-card">
-            <div className="process-number">4</div>
+            <div className="process-number">04</div>
             <h3>Test Execution</h3>
             <p>
               Execute test cases and compare actual
@@ -316,86 +521,62 @@ function App() {
           </div>
 
           <div className="process-card">
-            <div className="process-number">5</div>
+            <div className="process-number">05</div>
             <h3>Defect Reporting</h3>
             <p>
-              Report identified defects with proper
-              steps, severity and priority.
+              Report defects with proper steps,
+              severity, priority and evidence.
             </p>
           </div>
 
           <div className="process-card">
-            <div className="process-number">6</div>
+            <div className="process-number">06</div>
             <h3>Retesting & Regression</h3>
             <p>
-              Retest fixed defects and perform
-              regression testing.
+              Retest fixed defects and verify that
+              existing functionality continues to work.
             </p>
           </div>
+
         </div>
+
       </section>
 
       {/* =========================
           TOOLS
       ========================= */}
       <section id="tools" className="tools-section">
-        <h2>Testing Tools</h2>
+
+        <p className="section-label">
+          TECHNOLOGIES
+        </p>
+
+        <h2>
+          Tools & Technologies
+        </h2>
 
         <div className="tools-container">
-          <div className="tool-card">
-            <div className="tool-icon">🧪</div>
-            <h3>Selenium</h3>
-            <p>
-              Basic knowledge of Selenium WebDriver
-              for web application testing.
-            </p>
-          </div>
 
-          <div className="tool-card">
-            <div className="tool-icon">📋</div>
-            <h3>TestNG</h3>
-            <p>
-              Basic knowledge of TestNG for organizing
-              and executing automated test cases.
-            </p>
-          </div>
+          {tools.map((tool, index) => (
+            <div className="tool-card" key={index}>
 
-          <div className="tool-card">
-            <div className="tool-icon">🐞</div>
-            <h3>Bug Tracking</h3>
-            <p>
-              Knowledge of defect reporting,
-              severity, priority and defect life cycle.
-            </p>
-          </div>
+              <div className="tool-icon">
+                {tool.icon}
+              </div>
 
-          <div className="tool-card">
-            <div className="tool-icon">🔧</div>
-            <h3>Git & GitHub</h3>
-            <p>
-              Basic knowledge of Git and GitHub
-              for source code management.
-            </p>
-          </div>
+              <h3>
+                {tool.name}
+              </h3>
 
-          <div className="tool-card">
-            <div className="tool-icon">💻</div>
-            <h3>Eclipse</h3>
-            <p>
-              Used Eclipse for Java programming
-              and testing practice.
-            </p>
-          </div>
+              <p>
+                {tool.description}
+              </p>
 
-          <div className="tool-card">
-            <div className="tool-icon">📝</div>
-            <h3>Postman</h3>
-            <p>
-              Basic knowledge of Postman for API
-              request execution and validation.
-            </p>
-          </div>
+            </div>
+          ))}
+
         </div>
+
       </section>
 
       {/* =========================
@@ -405,132 +586,87 @@ function App() {
         id="what-i-can-do"
         className="what-i-can-do-section"
       >
-        <h2>What I Can Do</h2>
+
+        <p className="section-label">
+          WHAT I CAN DO
+        </p>
+
+        <h2>
+          QA & Testing Capabilities
+        </h2>
 
         <div className="what-i-can-do-container">
+
           <div className="what-card">
             <h3>📝 Test Case Writing</h3>
             <p>
-              Create clear and detailed test cases
-              based on requirements and user scenarios.
+              Create clear and detailed test cases based
+              on requirements and user scenarios.
             </p>
           </div>
 
           <div className="what-card">
             <h3>🔍 Test Execution</h3>
             <p>
-              Execute test cases, compare actual results
-              with expected results and identify failures.
+              Execute test cases and compare actual results
+              with expected results.
             </p>
           </div>
 
           <div className="what-card">
             <h3>🐞 Defect Reporting</h3>
             <p>
-              Identify defects and report them with
-              proper steps, severity and priority.
+              Identify defects and report them with proper
+              severity, priority and evidence.
             </p>
           </div>
 
           <div className="what-card">
             <h3>🔄 Regression Testing</h3>
             <p>
-              Perform regression testing to verify
-              existing functionality.
+              Verify existing functionality after changes
+              and defect fixes.
             </p>
           </div>
 
           <div className="what-card">
             <h3>🔥 Smoke Testing</h3>
             <p>
-              Perform basic checks to verify whether
-              a build is stable for detailed testing.
+              Perform basic build verification before
+              detailed testing.
             </p>
           </div>
 
           <div className="what-card">
-            <h3>📊 Test Scenarios</h3>
+            <h3>🤖 Automation</h3>
             <p>
-              Create test scenarios covering positive,
-              negative and real-world conditions.
+              Create Selenium automation tests using
+              Java, TestNG, Maven and POM.
             </p>
           </div>
+
         </div>
-      </section>
 
-      {/* =========================
-          WORKFLOW
-      ========================= */}
-      <section id="workflow" className="workflow-section">
-        <h2>My Testing Workflow</h2>
-
-        <div className="workflow-container">
-          <div className="workflow-step">
-            <div className="workflow-number">1</div>
-            <h3>Understand Requirements</h3>
-            <p>
-              Understand application requirements
-              and identify what needs to be tested.
-            </p>
-          </div>
-
-          <div className="workflow-step">
-            <div className="workflow-number">2</div>
-            <h3>Create Test Scenarios</h3>
-            <p>
-              Prepare test scenarios covering
-              important application functionality.
-            </p>
-          </div>
-
-          <div className="workflow-step">
-            <div className="workflow-number">3</div>
-            <h3>Write Test Cases</h3>
-            <p>
-              Create positive and negative test cases
-              with clear steps and expected results.
-            </p>
-          </div>
-
-          <div className="workflow-step">
-            <div className="workflow-number">4</div>
-            <h3>Execute Tests</h3>
-            <p>
-              Execute test cases and compare actual
-              results with expected results.
-            </p>
-          </div>
-
-          <div className="workflow-step">
-            <div className="workflow-number">5</div>
-            <h3>Report Defects</h3>
-            <p>
-              Report identified defects with proper
-              severity, priority and evidence.
-            </p>
-          </div>
-
-          <div className="workflow-step">
-            <div className="workflow-number">6</div>
-            <h3>Retest & Regression</h3>
-            <p>
-              Retest fixed defects and perform
-              regression testing.
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* =========================
           EDUCATION
       ========================= */}
       <section id="education" className="education-section">
-        <h2>Education & Certifications</h2>
+
+        <p className="section-label">
+          EDUCATION
+        </p>
+
+        <h2>
+          Education & Certifications
+        </h2>
 
         <div className="education-container">
+
           <div className="education-card">
             <h3>
-              Master of Computer Applications (MCA)
+              Master of Computer Applications
             </h3>
 
             <p className="education-place">
@@ -538,103 +674,195 @@ function App() {
               Bengaluru City University
             </p>
 
-            <p>Graduated in 2023</p>
-            <p>CGPA: 7.9</p>
+            <p>
+              Graduated in 2023
+            </p>
+
+            <p>
+              CGPA: 7.9
+            </p>
           </div>
 
           <div className="education-card">
-            <h3>Software Testing</h3>
+            <h3>
+              Software Testing
+            </h3>
 
             <p className="education-place">
               QSpiders
             </p>
 
             <p>
-              Manual Testing, Test Cases,
-              Bug Tracking, Selenium WebDriver,
-              TestNG and Testing Concepts
+              Manual Testing, Core Java, Selenium WebDriver,
+              TestNG, REST API Testing, Postman and SQL.
             </p>
           </div>
 
           <div className="education-card">
-            <h3>Full Stack Java Development</h3>
+            <h3>
+              Full Stack Java Development
+            </h3>
 
             <p className="education-place">
               KodNest
             </p>
 
             <p>
-              Java, HTML, CSS, JavaScript,
-              Spring and Web Development
+              Java, HTML, CSS, JavaScript, Spring
+              and Web Development.
             </p>
           </div>
 
           <div className="education-card">
-            <h3>Java Certification</h3>
+            <h3>
+              Java Certification
+            </h3>
 
             <p className="education-place">
               Great Learning
             </p>
 
             <p>
-              Java Programming Certification — 2025
+              Java Programming Certification – 2025
             </p>
           </div>
 
           <div className="education-card">
-            <h3>SQL Certification</h3>
+            <h3>
+              SQL Certification
+            </h3>
 
             <p className="education-place">
               Great Learning
             </p>
 
             <p>
-              SQL Certification — 2025
+              SQL Certification – 2025
             </p>
           </div>
+
         </div>
+
       </section>
 
       {/* =========================
-          CAREER
+          PROJECTS
       ========================= */}
-      <section id="career" className="career-section">
-        <h2>Career</h2>
+      <section id="projects" className="projects-section">
 
-        <div className="career-container">
-          <p>
-            I am looking for an opportunity to start
-            my career as a Software Tester in a
-            growth-oriented organization.
-          </p>
+        <p className="section-label">
+          MY WORK
+        </p>
 
-          <p>
-            My goal is to apply my testing knowledge,
-            gain real-world experience and continuously
-            improve my technical and professional skills.
-          </p>
+        <h2>
+          My Testing Projects
+        </h2>
+
+        <p className="projects-intro">
+          Here are the software testing projects I have worked on,
+          covering Manual Testing and Automation Testing.
+        </p>
+
+        <div className="projects-container">
+
+          {projects.map((project, index) => (
+
+            <div
+              className="project-card"
+              key={index}
+            >
+
+              <div className="project-image">
+                <span>
+                  SOFTWARE
+                  <br />
+                  TESTING
+                </span>
+              </div>
+
+              <div className="project-number">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <h3>
+                {project.title}
+              </h3>
+
+              <h4>
+                {project.type}
+              </h4>
+
+              <p>
+                {project.description}
+              </p>
+
+              <span className="project-tools">
+                {project.tools}
+              </span>
+
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-button"
+                >
+                  View Project →
+                </a>
+              ) : (
+                <span className="project-button disabled">
+                  View Project →
+                </span>
+              )}
+
+            </div>
+
+          ))}
+
         </div>
+
       </section>
 
       {/* =========================
           RESUME
       ========================= */}
       <section id="resume" className="resume-section">
-        <h2>My Resume</h2>
 
-        <p>
-          Interested in my profile? Download my resume
-          to learn more about my education, skills,
-          projects and software testing knowledge.
+        <p className="section-label">
+          RESUME
         </p>
 
-        <a
-          href="/Shreya_T_Resume.pdf"
-          download
-          className="resume-download-button"
-        >
-          📄 Download My Resume
-        </a>
+        <h2>
+          My Resume
+        </h2>
+
+        <p>
+          Interested in my profile? View or download my resume
+          to learn more about my education, skills, testing
+          knowledge and projects.
+        </p>
+
+        <div className="resume-buttons">
+
+          <a
+            href="/Shreya_T_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-view-btn"
+          >
+            👁️ View Resume
+          </a>
+
+          <a
+            href="/Shreya_T_Resume.pdf"
+            download
+            className="resume-btn"
+          >
+            📄 Download Resume
+          </a>
+
+        </div>
+
       </section>
 
       {/* =========================
@@ -644,207 +872,216 @@ function App() {
         id="why-hire-me"
         className="why-hire-section"
       >
-        <h2>Why Hire Me?</h2>
+
+        <p className="section-label">
+          WHY ME
+        </p>
+
+        <h2>
+          Why Hire Me?
+        </h2>
 
         <div className="why-hire-container">
+
           <div className="why-hire-card">
             <div className="why-hire-icon">🧪</div>
-
             <h3>Testing Knowledge</h3>
-
             <p>
-              Good understanding of manual testing
-              concepts, test cases, defect reporting
-              and testing processes.
+              Good understanding of manual testing concepts,
+              test cases, defect reporting and testing processes.
             </p>
           </div>
 
           <div className="why-hire-card">
             <div className="why-hire-icon">🔍</div>
-
             <h3>Attention to Detail</h3>
-
             <p>
-              I carefully analyze requirements and
-              user behavior to identify defects.
+              I carefully analyze requirements and application
+              behavior to identify defects.
+            </p>
+          </div>
+
+          <div className="why-hire-card">
+            <div className="why-hire-icon">🤖</div>
+            <h3>Automation Skills</h3>
+            <p>
+              Hands-on Selenium automation knowledge using
+              Java, TestNG, Maven and POM.
             </p>
           </div>
 
           <div className="why-hire-card">
             <div className="why-hire-icon">📚</div>
-
             <h3>Quick Learner</h3>
-
             <p>
-              I enjoy learning new technologies and
-              adapting quickly to new environments.
+              I enjoy learning new technologies and adapting
+              to new testing environments.
             </p>
-          </div>
-
-          <div className="why-hire-card">
-            <div className="why-hire-icon">💡</div>
-
-            <h3>Problem Solving</h3>
-
-            <p>
-              I approach problems logically and work
-              towards finding practical solutions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================
-          PROJECTS
-      ========================= */}
-      <section id="projects" className="projects-section">
-        <h2>My Projects</h2>
-
-        <div className="projects-container">
-
-          <div className="project-card">
-            <h3>Drowsiness Detection System</h3>
-
-            <p>
-              A Python and OpenCV based project
-              that detects driver drowsiness and
-              helps improve road safety.
-            </p>
-
-            <span>
-              Python | OpenCV
-            </span>
-
-            <a
-              href="https://github.com/ShreyaThimmaraju"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-button"
-            >
-              View on GitHub
-            </a>
-          </div>
-
-          <div className="project-card">
-            <h3>Easy School Management System</h3>
-
-            <p>
-              A web-based application designed
-              to manage school-related information
-              and simplify administrative activities.
-            </p>
-
-            <span>
-              Java | Spring | HTML | CSS
-            </span>
-
-            <a
-              href="https://github.com/ShreyaThimmaraju"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-button"
-            >
-              View on GitHub
-            </a>
-          </div>
-
-          <div className="project-card">
-            <h3>IoT Floor Cleaning Mop</h3>
-
-            <p>
-              An IoT-based project designed to
-              assist with floor cleaning using
-              automation and electronic components.
-            </p>
-
-            <span>
-              IoT | Electronics
-            </span>
-
-            <a
-              href="https://github.com/ShreyaThimmaraju"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-button"
-            >
-              View on GitHub
-            </a>
-          </div>
-
-          <div className="project-card">
-            <h3>Crop Recommendation System</h3>
-
-            <p>
-              A project that recommends suitable
-              crops based on agricultural and
-              environmental parameters.
-            </p>
-
-            <span>
-              Python | Machine Learning
-            </span>
-
-            <a
-              href="https://github.com/ShreyaThimmaraju"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-button"
-            >
-              View on GitHub
-            </a>
           </div>
 
         </div>
+
       </section>
 
       {/* =========================
           CONTACT
       ========================= */}
-      <section id="contact" className="contact-section">
-        <h2>Contact Me</h2>
+      <section
+        id="contact"
+        className="contact-section"
+      >
 
-        <p>
-          I'm open to new opportunities and would love
-          to connect.
-        </p>
+        <div className="section-heading">
 
-        <div className="contact-buttons">
-          <a
-            href="mailto:shreyathimmarajuv@gmail.com"
-            className="contact-button"
-          >
-            📧 Email
-          </a>
+          <span>
+            GET IN TOUCH
+          </span>
 
-          <a
-            href="https://www.linkedin.com/in/shreya-t-9726232a2/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-button"
-          >
-            💼 LinkedIn
-          </a>
+          <h2>
+            Let's Connect
+          </h2>
 
-          <a
-            href="https://github.com/ShreyaThimmaraju"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-button"
-          >
-            💻 GitHub
-          </a>
+          <p>
+            I'm open to Software Testing and QA opportunities.
+            Feel free to connect with me.
+          </p>
+
         </div>
+
+        <div className="contact-container">
+
+          <div className="contact-info">
+
+            <h3>
+              Contact Me
+            </h3>
+
+            <p>
+              If you have an opportunity, project or
+              testing-related discussion, feel free to reach out.
+            </p>
+
+            <div className="contact-item">
+              <strong>
+                📧 Email
+              </strong>
+
+              <a href="mailto:shreyathimmarajuv@gmail.com">
+                shreyathimmarajuv@gmail.com
+              </a>
+            </div>
+
+            <div className="contact-item">
+              <strong>
+                💼 LinkedIn
+              </strong>
+
+              <a
+                href="https://www.linkedin.com/in/shreya-t-9726232a2/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn Profile
+              </a>
+            </div>
+
+            <div className="contact-item">
+              <strong>
+                💻 GitHub
+              </strong>
+
+              <a
+                href="https://github.com/ShreyaThimmaraju"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github.com/ShreyaThimmaraju
+              </a>
+            </div>
+
+          </div>
+
+          {/* WEB3FORMS CONTACT FORM */}
+          <form
+            className="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="a5a83efd-da5e-4c54-92cc-66e7b23b1e9b"
+            />
+
+            <input
+              type="hidden"
+              name="subject"
+              value="New Portfolio Contact Message"
+            />
+
+            <input
+              type="hidden"
+              name="from_name"
+              value="Shreya T Portfolio"
+            />
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              className="hidden"
+              style={{ display: "none" }}
+            />
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="6"
+              required
+            ></textarea>
+
+            <button type="submit">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
       </section>
 
       {/* =========================
           FOOTER
       ========================= */}
       <footer className="footer">
+
         <p>
           © 2026 Shreya T. All Rights Reserved.
         </p>
 
         <div className="footer-links">
+
           <a
             href="https://www.linkedin.com/in/shreya-t-9726232a2/"
             target="_blank"
@@ -861,18 +1098,27 @@ function App() {
             GitHub
           </a>
 
-          <a href="mailto:shreyathimmarajuv@gmail.com">
+          <a
+            href="mailto:shreyathimmarajuv@gmail.com"
+          >
             Email
           </a>
+
         </div>
+
       </footer>
 
       {/* =========================
           BACK TO TOP
       ========================= */}
-      <a href="#home" className="back-to-top">
+      <a
+        href="#home"
+        className="back-to-top"
+        aria-label="Back to top"
+      >
         ↑
       </a>
+
     </div>
   );
 }
